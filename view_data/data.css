@@ -16,6 +16,14 @@
     cursor: pointer;
 }
 
+.button:hover{
+    background-color: #006c91;
+}
+
+.button:active{
+    background-color: #3b9cbc;
+}
+
 #browser-settings h3{
     margin-bottom: 0;
 }
