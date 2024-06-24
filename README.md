@@ -17,6 +17,7 @@ Use this data to implement human like behavior in bots interacting with websites
 - mouseup
 - scrolling
 - a mousedown immediately followed by a mouseup can be converted to a click
+- two clicks in less than a 500ms interval can be condensed to a double click
 ## Read the CSV file
 
 The file name is built like so:
@@ -60,7 +61,6 @@ For a scroll:
 - the timestamp in millisecond (JavaScript Date.now()) at the end of the scroll
 ## Actions to come
 
-- Double click
 - Key press (any)
 ## Contributing
 
