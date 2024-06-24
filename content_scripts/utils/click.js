@@ -9,7 +9,7 @@ function createClick(mouseup, mousedown) {
     click.beginMouseCoord.y = mousedown.mouseCoord.y
     click.endMouseCoord.x = mouseup.mouseCoord.x
     click.endMouseCoord.y = mouseup.mouseCoord.y
-    click.actionTime = Date.now()
+    click.actionTime = mouseup.actionTime
     click.clickTime = mouseup.actionTime - mousedown.actionTime
 
     return click
