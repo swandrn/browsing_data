@@ -45,8 +45,8 @@ function arrayToCsv(actionsOnDomain){
                 String(obj.page.title),
                 String(obj.page.url),
                 String(obj.action),
-                String(obj.direction),
                 String(obj.id),
+                String(obj.direction),
                 String(obj.heightScrolled),
                 String(obj.actionTime),
             )
