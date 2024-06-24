@@ -3,9 +3,15 @@
     "name": "Browsing Data",
     "version": "1.0",
     "description": "Allows a user to see their browsing data",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "browsingdata@browsingbehavior.bd",
+            "strict_min_version": "109.0"
+        }
+    },
     "icons": {
-        "48": "icon/icon48.png",
-        "64": "icon/icon64.png"
+        "48": "_icon/icon48.png",
+        "64": "_icon/icon64.png"
     },
     "action": {
         "default_popup": "view_data/data.html"
