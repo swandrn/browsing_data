@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Browsing Data",
+    "version": "1.0",
+    "description": "Allows a user to see the current session's browsing data",
+    "icons": {
+        "48": "icon/icon48.png",
+        "64": "icon/icon64.png"
+    },
+    "action": {
+        "default_popup": "view_data/data.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content_scripts/class/ClickAction.class.js",
+                "content_scripts/class/MouseClick.class.js",
+                "content_scripts/class/Page.class.js",
+                "content_scripts/class/ScrollAction.class.js",
+                "content_scripts/event_listeners/mouse/click_listeners.js",
+                "content_scripts/event_listeners/mouse/scroll_listeners.js",
+                "content_scripts/utils/clean_text.js",
+                "content_scripts/utils/data_to_display.js",
+                "content_scripts/utils/click.js",
+                "content_scripts/utils/scrolling.js",
+                "content_scripts/src/main.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ]
+}

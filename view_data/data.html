@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="data.css">
+    <title>Browsing Behavior</title>
+</head>
+<body>
+    <div class="button-div">
+        <button type="button" id="show-data-button" class="button">Condensed data</button>
+        <button type="button" id="detailed-data-button" class="button">Detailed data</button>
+        <button type="button" id="download-data-button" class="button">Download condensed data</button>
+        <button type="button" id="download-detailed-data-button" class="button">Download detailed data</button>
+    </div>
+
+    <div id="browser-settings">
+        <h3>Browser Settings</h3>
+        <ul>
+            <li id="user-agent"><span>UserAgent</span></li>
+            <li id="screen-size"><span>Browser Size</span></li>
+        </ul>
+    </div>
+
+    <div id="data">
+    </div>
+    
+    <script src="javascript/download_data.js"></script>
+    <script src="javascript/format_data.js"></script>
+    <script src="javascript/display_data.js"></script>
+    <script src="javascript/data_handler.js"></script>
+</body>
+</html>
