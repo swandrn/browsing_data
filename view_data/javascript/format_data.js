@@ -51,6 +51,24 @@ function arrayToCsv(actionsOnDomain){
                 String(obj.actionTime),
             )
         }
+
+        if(obj.action === "dblclick"){
+            return new Array(
+                String(obj.page.title),
+                String(obj.page.url),
+                String(obj.action),
+                String(obj.firstId),
+                String(obj.secondId),
+                String(obj.firstClickTarget),
+                String(obj.secondClickTarget),
+                String(obj.firstMouseCoord.x),
+                String(obj.firstMouseCoord.y),
+                String(obj.secondMouseCoord.x),
+                String(obj.secondMouseCoord.y),
+                String(obj.actionTime),
+                String(obj.dblclickTime),
+            )
+        }
     })
     .map((arrOfActions) => arrOfActions
     .map((value) => value.replaceAll('"', '""'))

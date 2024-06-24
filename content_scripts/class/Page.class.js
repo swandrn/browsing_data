@@ -6,6 +6,6 @@ class Page{
     constructor(url, title){
         this.url = url
         this.title = title
-        this.time = new Date.now()
+        this.time = Date.now()
     }
 }

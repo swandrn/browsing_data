@@ -23,6 +23,24 @@ function displayCondensedData(actionsOnDomain) {
 
             const action = actionsOnDomain[i][actionIndex]
 
+            //In case of a dblclick
+            if (action.action == "dblclick") {
+                p.textContent = `
+                ${action.action}\r\n
+                ${action.firstId}\r\n
+                ${action.secondId}\r\n
+                ${action.page.title}\r\n
+                ${action.firstMouseCoord.x}\r\n
+                ${action.firstMouseCoord.y}\r\n
+                ${action.firstClickTarget}\r\n
+                ${action.secondMouseCoord.x}\r\n
+                ${action.secondMouseCoord.y}\r\n
+                ${action.secondClickTarget}\r\n
+                ${action.actionTime}\r\n
+                ${action.dblclickTime}ms\r\n
+                `
+            }
+
             //In case of a click
             if (action.action == "click") {
                 p.textContent = `
@@ -35,7 +53,7 @@ function displayCondensedData(actionsOnDomain) {
                 ${action.endMouseCoord.x}\r\n
                 ${action.endMouseCoord.y}\r\n
                 ${action.mouseUpTarget}\r\n
-                ${action.actionTime}ms\r\n
+                ${action.actionTime}\r\n
                 ${action.clickTime}ms\r\n
                 `
             }

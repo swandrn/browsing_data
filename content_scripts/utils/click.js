@@ -15,6 +15,24 @@ function createClick(mouseup, mousedown) {
     return click
 }
 
+function createDblClick(clickOne, clickTwo) {
+    let dblclick = new DoubleClick();
+    dblclick.page = clickTwo.page
+    dblclick.action = "dblclick"
+    dblclick.firstId = clickOne.id
+    dblclick.secondId = clickTwo.id
+    dblclick.firstClickTarget = clickOne.mouseUpTarget
+    dblclick.secondClickTarget = clickTwo.mouseUpTarget
+    dblclick.firstMouseCoord.x = clickOne.endMouseCoord.x
+    dblclick.firstMouseCoord.y = clickOne.endMouseCoord.y
+    dblclick.secondMouseCoord.x = clickTwo.endMouseCoord.x
+    dblclick.secondMouseCoord.y = clickTwo.endMouseCoord.y
+    dblclick.actionTime = clickTwo.actionTime
+    dblclick.dblclickTime = clickOne.clickTime + clickTwo.clickTime
+
+    return dblclick
+}
+
 function replaceMouseDownUpWithClick(actions, mouseDownUpIndexes){
     let actionsClone = actions.slice()
     
@@ -41,4 +59,18 @@ function getMouseUpDownPairIndexes(actions) {
         .filter((element) => element != undefined)
     
     return neighborMouseUpDown
+}
+
+function replaceClicksWithDblClick(actions){
+    let actionsClone = actions.slice()
+    
+    for (let i = 0; i < actionsClone.length; i++) {
+        if(actionsClone[i].action === "click"){
+            if(actionsClone[i + 1]?.action === "click" && (actionsClone[i]?.actionTime - actionsClone[i + 1].actionTime) < 500){
+                let dblclick = createDblClick(actionsClone[i + 1], actionsClone[i])
+                actionsClone.splice(i, 2, dblclick)
+            }
+        }
+    }
+    return actionsClone
 }

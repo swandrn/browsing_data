@@ -18,6 +18,7 @@
             "js": [
                 "content_scripts/class/ClickAction.class.js",
                 "content_scripts/class/MouseClick.class.js",
+                "content_scripts/class/DoubleClick.class.js",
                 "content_scripts/class/Page.class.js",
                 "content_scripts/class/ScrollAction.class.js",
                 "content_scripts/event_listeners/mouse/click_listeners.js",

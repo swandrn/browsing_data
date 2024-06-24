@@ -54,6 +54,7 @@ function fetchCondensedData(sender, sendResponse) {
     const actionsOnDomain = new Array()
     let mouseDownUpPairIndexes = getMouseUpDownPairIndexes(actions)
     let cloneActions = replaceMouseDownUpWithClick(actions, mouseDownUpPairIndexes)
+    cloneActions = replaceClicksWithDblClick(cloneActions)
     for (let i = 0; i < uniqueUrls.length; i++) {
         let urlActions = getAllActionsOfUrl(cloneActions, uniqueUrls[i])
         actionsOnDomain.unshift(urlActions)
