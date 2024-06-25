@@ -51,6 +51,21 @@ For a click:
 - the timestamp in millisecond (JavaScript Date.now()) of the mouseup action
 - the click time in millisecond
 
+For a double click:
+- page title the action was executed on
+- page url the action was executed on
+- the type of action executed
+- the first click id
+- the second click id
+- the text content of the element hovered on the first mouseup
+- the text content of the element hovered on the second mouseup
+- the x coordinate of the cursor on first mouseup
+- the y coordinate of the cursor on first mouseup
+- the x coordinate of the cursor on second mouseup
+- the y coordinate of the cursor on second mouseup
+- the timestamp in millisecond (JavaScript Date.now()) of the second mouseup action
+- the sum of the two click times in millisecond
+
 For a scroll:
 - page title the action was executed on
 - page url the action was executed on
