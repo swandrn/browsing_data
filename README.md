@@ -57,7 +57,7 @@ For a scroll:
 - the type of action executed
 - the action id
 - the scroll direction
-- the height scrolled
+- the height scrolled in px
 - the timestamp in millisecond (JavaScript Date.now()) at the end of the scroll
 ## Actions to come
 
