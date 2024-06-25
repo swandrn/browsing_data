@@ -2,29 +2,6 @@ const actions = localStorage.getItem("actions") ? JSON.parse(localStorage.getIte
 
 let numberOfActions = localStorage.getItem("numberOfActions") ? parseInt(localStorage.getItem("numberOfActions")) : 0
 
-document.onkeydown = function (e) {
-    if (e.key == "g") {
-        for (let i = 0; i < actions.length; i++) {
-            console.log(Object.values(actions[i]))
-        }
-    }
-
-    if (e.key == "f") {
-        localStorage.clear()
-    }
-
-    if (e.key == "u") {
-        console.log(getUniqueUrls(actions))
-    }
-
-    if (e.key == "a") {
-        let uniqueUrls = getUniqueUrls(actions)
-        for (let i = 0; i < uniqueUrls.length; i++) {
-            console.log(getAllActionsOfUrl(actions, uniqueUrls[i]))
-        }
-    }
-}
-
 browser.runtime.onMessage.addListener(parseMessage)
 
 function parseMessage(message, sender, sendResponse) {
