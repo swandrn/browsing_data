@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Browsing Data",
-    "version": "1.01",
+    "version": "1.0.1",
     "description": "Allows a user to see their browsing data",
     "browser_specific_settings": {
         "gecko": {
