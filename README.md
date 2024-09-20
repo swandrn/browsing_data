@@ -16,6 +16,8 @@ Use this data to implement human like behavior in bots interacting with websites
 - mousedown
 - mouseup
 - scrolling
+- keydown
+- keyup
 - a mousedown immediately followed by a mouseup can be converted to a click
 - two clicks in less than a 500ms interval can be condensed to a double click
 ## Read the CSV file
@@ -74,6 +76,13 @@ For a scroll:
 - the scroll direction
 - the height scrolled in px
 - the timestamp in millisecond (JavaScript Date.now()) at the end of the scroll
+
+For a keydown/keyup
+- page title the action was executed on
+- page url the action was executed on
+- the type of action executed
+- the action id
+- the timestamp in millisecond (JavaScript Date.now())
 ## Actions to come
 
 - Key press (any)
