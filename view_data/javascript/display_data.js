@@ -124,6 +124,14 @@ function displayDetailedData(actionsOnDomain) {
                     `
             }
 
+            if (action.action == "keydown" || action.action == "keyup") {
+                p.textContent = `
+                    ${action.action}\r\n
+                    ${action.id}\r\n
+                    ${action.page.title}\r\n
+                    ${action.actionTime}\r\n
+                    `
+            }
             dataDisplay.append(p)
         }
     }
