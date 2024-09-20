@@ -85,7 +85,7 @@ For a keydown/keyup
 - the timestamp in millisecond (JavaScript Date.now())
 ## Actions to come
 
-- Key press (any)
+- Taking suggestions
 ## Contributing
 
 Pointers on algorithm optimization when it comes to both speed and memory usage are greatly appreciated.
