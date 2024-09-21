@@ -20,8 +20,6 @@ document.addEventListener('keydown', function (e) {
             keydown: key,
         })
 
-        console.log(keysPressed)
-
         localStorage.setItem("keyDownId", keyDownId)
         keyDownId++
 
@@ -33,9 +31,7 @@ document.addEventListener('keydown', function (e) {
 })
 
 document.addEventListener('keyup', function (e) {
-    console.log(keysPressed)
     let index = keysPressed.map(obj => obj.keyCode).indexOf(e.code)
-    console.log(index)
 
     let url = window.location.href
     let title = document.title
